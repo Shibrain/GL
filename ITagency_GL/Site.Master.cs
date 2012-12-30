@@ -11,18 +11,19 @@ namespace HR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        //    if (Session["UserId"] == null)
-        //        Response.Redirect("~/Security/Login.aspx");
-        //    lblUserName.Text = Session["UserName"].ToString();
-        //    lblloginTime.Text = System.DateTime.Now.ToString();
+         // if (Session["UserId"] == null)
+             // Response.Redirect("~/Security/Login.aspx");
+        //  lblUserName.Text = Session["UserName"].ToString();
+            lblloginTime.Text = System.DateTime.Now.ToString();
             Session["CompId"] = 1;
+            Session["UserId"] = 1;
         }
 
-      
 
-        //protected void lblLogOut_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("~/security/logout.aspx");
-        //}
+
+        protected void lblLogOut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/security/logout.aspx");
+        }
     }
 }

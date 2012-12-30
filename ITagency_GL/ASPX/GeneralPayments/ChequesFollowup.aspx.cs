@@ -37,5 +37,10 @@ namespace ITagency_GL.ASPX.GeneralPayments
 
             }
         }
+
+        protected void txtCRNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

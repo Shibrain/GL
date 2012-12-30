@@ -12,7 +12,7 @@ namespace BLL.Profit_Center
 
 
         /// <summary>
-        /// 
+        ///  
         /// </summary>
         /// <param name="userID"></param>
         /// <returns></returns>

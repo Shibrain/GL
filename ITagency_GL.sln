@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITagency_GL", "ITagency_GL\ITagency_GL.csproj", "{817A368A-5805-418E-87D0-23DB212F182E}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NumberToWords", "..\OMA Last\OmaMedia\NumberToWords\NumberToWords.vbproj", "{8437F582-F335-49B8-8AAF-F852E5B0E2E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{817A368A-5805-418E-87D0-23DB212F182E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{817A368A-5805-418E-87D0-23DB212F182E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{817A368A-5805-418E-87D0-23DB212F182E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8437F582-F335-49B8-8AAF-F852E5B0E2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8437F582-F335-49B8-8AAF-F852E5B0E2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8437F582-F335-49B8-8AAF-F852E5B0E2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8437F582-F335-49B8-8AAF-F852E5B0E2E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

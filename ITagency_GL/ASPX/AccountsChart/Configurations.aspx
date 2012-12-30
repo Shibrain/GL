@@ -195,7 +195,11 @@
                     </td>
                     <td>
                         <asp:ObjectDataSource ID="odsCurrencies" runat="server" SelectMethod="View" 
-                            TypeName="BLL.Currencies.Currencies"></asp:ObjectDataSource>
+                            TypeName="BLL.Currencies.Currencies">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="CompId" SessionField="CompId" Type="Int32" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
                     </td>
                 </tr>
                 <tr>

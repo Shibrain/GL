@@ -10,7 +10,7 @@
 namespace ITagency_GL.ASPX.GeneralPayments {
     
     
-    public partial class ChequesFollowupEdit {
+    public partial class SearchPaymentReciept {
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -22,112 +22,94 @@ namespace ITagency_GL.ASPX.GeneralPayments {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// lblType control.
+        /// ddlProfitCenters control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblType;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProfitCenters;
         
         /// <summary>
-        /// txtChequeNo control.
+        /// txtFrom2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChequeNo;
+        protected global::Telerik.Web.UI.RadDatePicker txtFrom2;
         
         /// <summary>
-        /// txtAddressedTo control.
+        /// txtTo2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddressedTo;
+        protected global::Telerik.Web.UI.RadDatePicker txtTo2;
         
         /// <summary>
-        /// ddlBanks control.
+        /// radCashRecipt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBanks;
+        protected global::System.Web.UI.WebControls.RadioButton radCashRecipt;
         
         /// <summary>
-        /// txtDueDate control.
+        /// radCashDisburment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadDatePicker txtDueDate;
+        protected global::System.Web.UI.WebControls.RadioButton radCashDisburment;
         
         /// <summary>
-        /// txtAmount control.
+        /// radChequeRecipt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAmount;
+        protected global::System.Web.UI.WebControls.RadioButton radChequeRecipt;
         
         /// <summary>
-        /// ddlCurrencies control.
+        /// radChequeDisburment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCurrencies;
+        protected global::System.Web.UI.WebControls.RadioButton radChequeDisburment;
         
         /// <summary>
-        /// lblExchangeRate control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblExchangeRate;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// txtDescription control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// ddlStatus control.
+        /// btnPrint control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
-        
-        /// <summary>
-        /// BtnUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnUpdate;
-        
-        /// <summary>
-        /// btnDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.Button btnPrint;
         
         /// <summary>
         /// lblFeedBack control.
@@ -139,48 +121,66 @@ namespace ITagency_GL.ASPX.GeneralPayments {
         protected global::System.Web.UI.WebControls.Label lblFeedBack;
         
         /// <summary>
-        /// lblStatusID control.
+        /// gvResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatusID;
+        protected global::System.Web.UI.WebControls.GridView gvResults;
         
         /// <summary>
-        /// lblTypeID control.
+        /// popupPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTypeID;
+        protected global::System.Web.UI.WebControls.Panel popupPanel;
         
         /// <summary>
-        /// lblFinancialYearID control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFinancialYearID;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// odsBanks control.
+        /// txtEmail_AutoCompleteExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsBanks;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtEmail_AutoCompleteExtender;
         
         /// <summary>
-        /// odsCurrencies control.
+        /// okButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsCurrencies;
+        protected global::System.Web.UI.WebControls.Button okButton;
+        
+        /// <summary>
+        /// cancelButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cancelButton;
+        
+        /// <summary>
+        /// odsUserProfitCenters control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsUserProfitCenters;
     }
 }

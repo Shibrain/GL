@@ -82,8 +82,8 @@ namespace BLL.Accounts
             if (upperAccountId == "" || upperAccountId == null)
             {
                 Sql = string.Format("INSERT INTO AccountTree(AccountName, AccountCode,OpenDate, IsOpen, IsNode, AccountLevelNo,AccountTypeID, EntryUserId,CompId,Entry_Date) VALUES('{0}', '{1}', '{2}', {3}, {4}, {5}, {6}, {7}, {8},'{9}') ",
-                       AccountName, this.GenerateNewAccountCode(0), DatabaseClass.FormatDateArEgMDY(OpenDate),
-                        IsOpen, DatabaseClass.Bool2Int(true), 1, AccountTypeID, EntryUserId, CompId, DatabaseClass.FormatDateArEgMDY(Entry_Date));
+                       AccountName, this.GenerateNewAccountCode(0), DatabaseClass.FormatDateString(OpenDate),
+                        IsOpen, DatabaseClass.Bool2Int(true), 1, AccountTypeID, EntryUserId, CompId, DatabaseClass.FormatDateString(Entry_Date));
                 // DatabaseClass.Bool2Int(chkIsOpen.Checked)
             }
             else
@@ -92,8 +92,8 @@ namespace BLL.Accounts
                 int newAccountLevel = this.GetAccountLevel(int.Parse(upperAccountId)) + 1;
                 string NewAccount = this.GenerateNewAccountCode(int.Parse(upperAccountId.ToString())).ToString();
                 Sql = string.Format("INSERT INTO AccountTree(AccountName, AccountCode,OpenDate, IsOpen, IsNode, AccountLevelNo,AccountTypeID, EntryUserId,CompId,Entry_Date,upperAccountId) VALUES('{0}', '{1}', '{2}', {3}, {4}, '{5}', {6}, {7}, {8},'{9}','{10}') ",
-                      AccountName, NewAccount, DatabaseClass.FormatDateArEgMDY(OpenDate),
-                       IsOpen, DatabaseClass.Bool2Int(true), newAccountLevel, AccountTypeID, EntryUserId, CompId, DatabaseClass.FormatDateArEgMDY(Entry_Date), upperAccountId);
+                      AccountName, NewAccount, DatabaseClass.FormatDateString(OpenDate),
+                       IsOpen, DatabaseClass.Bool2Int(true), newAccountLevel, AccountTypeID, EntryUserId, CompId, DatabaseClass.FormatDateString(Entry_Date), upperAccountId);
                 string test = Sql;
             }
             int ExSql = DB.ExecuteNonQuery(Sql);

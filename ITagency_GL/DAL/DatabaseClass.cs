@@ -479,13 +479,18 @@ namespace DAL
         /// </summary>
         /// <param name="strDate">String of date the must be formatted</param>
         /// <returns>date in string formatted in MDY</returns>
+        //public static string FormatDateString(string strDate)
+        //{
+        //    DateTime passedDate = DateTime.Parse(strDate);
+        //    string date = string.Format("{1}/{0}/{2}", passedDate.Day, passedDate.Month, passedDate.Year);
+        //    return date;
+        //}
         public static string FormatDateString(string strDate)
         {
             DateTime passedDate = DateTime.Parse(strDate);
             string date = string.Format("{1}/{0}/{2}", passedDate.Day, passedDate.Month, passedDate.Year);
             return date;
         }
-
 
         /// <summary>
         /// To format date string after parsing it to be in a determined format
@@ -507,10 +512,10 @@ namespace DAL
         /// </summary>
         /// <param name="dateText">String of date the must be formatted</param>
         /// <returns>ate in string formatted</returns>
-        public static string FormatDateArEgMDY(string dateText)
-        {
-            return FormatDateByLocale(dateText, "ar-eg", "MM/dd/yyyy");
-        }
+        //public static string FormatDateString(string dateText)
+        //{
+        //    return FormatDateByLocale(dateText, "ar-eg", "MM/dd/yyyy");
+        //}
 
 
         /// <summary>

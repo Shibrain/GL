@@ -17,8 +17,15 @@ namespace BLL.Financial_Period
 
             DataTable dt = db.ExecuteQuery(sql);
             return dt;
-
+           
 
         }
+        public static DataTable GetFinancialPeriod(int compId)
+        {
+            
+            string sql = string.Format("SELECT TOP 1 PeriodId, PeriodName, StartDate, EndDate FROM FinancialPeriods WHERE Status=1 and CompId={0} ORDER BY StartDate DESC ",compId);
+            return new DatabaseClass().ExecuteQuery(sql);
+        }
+
     }
 }

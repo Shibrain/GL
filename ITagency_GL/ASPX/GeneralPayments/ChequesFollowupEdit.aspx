@@ -14,20 +14,23 @@
                     <td width="20%">
                         Check Type / نوع الشيك</td>
                     <td width="80%">
-                        &nbsp;</td>
+                        <asp:Label ID="lblType" runat="server"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         Check No. / الرقم</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:TextBox ID="txtChequeNo" runat="server"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <span ID="result_box" class="short_text" lang="en"><span class="">Entitled</span>
                         <span class="hps">to / معنون إلى</span></span></td>
                     <td>
-                        &nbsp;</td>
+                        <asp:TextBox ID="txtAddressedTo" runat="server" Width="254px"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -64,9 +67,8 @@
                         العملة</span></span></td>
                     <td>
                         <asp:DropDownList ID="ddlCurrencies" runat="server" AppendDataBoundItems="True" 
-                            AutoPostBack="True" DataSourceID="sdsCurrencies" DataTextField="CurrencyNameAr" 
-                            DataValueField="CurrencyId" OnDataBound="ddlCurrencies_DataBound" 
-                            OnSelectedIndexChanged="ddlCurrencies_SelectedIndexChanged" Width="160px">
+                            AutoPostBack="True" DataSourceID="odsCurrencies" DataTextField="CurrencyNameAr" 
+                            DataValueField="CurrencyId" Width="160px">
                             <asp:ListItem Selected="True" Text="اختيار" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                     </td>
@@ -90,21 +92,44 @@
                 </tr>
                 <tr>
                     <td>
-                        &nbsp;</td>
+                        Cheque<span ID="result_box5" class="short_text" lang="en"><span class="hps"> 
+                        Status / حالة الشيك</span></span></td>
                     <td>
-                        &nbsp;</td>
+                        <asp:DropDownList ID="ddlStatus" runat="server">
+                            <asp:ListItem Selected="True" Value="0">اختيار</asp:ListItem>
+                            <asp:ListItem Value="1">تحت التحصيل</asp:ListItem>
+                            <asp:ListItem Value="2">تم التحصيل</asp:ListItem>
+                            <asp:ListItem Value="3">راجع</asp:ListItem>
+                            <asp:ListItem Value="3">آجل</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         &nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:Button ID="BtnUpdate" runat="server" onclick="BtnUpdate_Click" 
+                            Text="Update" Width="100px" />
+                        &nbsp;<asp:Button ID="btnDelete" runat="server" ForeColor="#CC0000" 
+                            onclick="btnDelete_Click" Text="Delete" Width="100px" />
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         &nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:Label ID="lblFeedBack" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblStatusID" runat="server" Style="direction: ltr" 
+                            Visible="False"></asp:Label>
+                        <asp:Label ID="lblTypeID" runat="server" Visible="False"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblFinancialYearID" runat="server" Visible="False"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -116,6 +141,8 @@
                                 <asp:SessionParameter Name="CompId" SessionField="CompId" Type="Int32" />
                             </SelectParameters>
                         </asp:ObjectDataSource>
+                        <asp:ObjectDataSource ID="odsCurrencies" runat="server" SelectMethod="View" 
+                            TypeName="BLL.Currencies.Currencies"></asp:ObjectDataSource>
                     </td>
                 </tr>
             </table>

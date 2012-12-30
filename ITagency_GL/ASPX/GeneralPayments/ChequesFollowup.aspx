@@ -14,7 +14,7 @@
                 <tr>
                     <td width="20%">
                         Check Type / نوع الشيك</td>
-                    <td>
+                    <td width="80%">
                         <asp:DropDownList ID="ddlChequeType" runat="server" AppendDataBoundItems="True" 
                             AutoPostBack="True" onselectedindexchanged="ddlChequeType_SelectedIndexChanged" 
                             Style="height: 22px">
@@ -35,8 +35,9 @@
                     <td>
                         Date between / التاريخ بين</td>
                     <td>
-                        <table class="style5">
+                        <table width="100%">
                             <tr>
+                            <td>from / من</td>
                                 <td width="40%">
                                     <telerik:RadDatePicker ID="Date1" Runat="server">
                                     </telerik:RadDatePicker>

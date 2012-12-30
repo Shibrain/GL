@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Xml.Linq;
+using DAL;
 
 namespace Shared
 {
@@ -21,8 +22,7 @@ namespace Shared
         {
             return "One Record Added Successfully!";
         }
-
-
+        
         /// <summary>
         /// 
         /// </summary>
